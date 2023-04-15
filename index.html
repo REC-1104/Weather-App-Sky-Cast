@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/3a96c6052d.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="back">
+    
+    <div id="bg" >
+    <div class="name">
+        <h1>SKY CAST</h1>
+        <img src="./resources/icons/sun (1).gif" alt="gif" id="gif">
+    </div>
+
+    <div class="input">
+        <input id="cityname" type="text" placeholder="Search...." onkeypress="func(this)" />
+        <img src="./resources/search-icon.svg" alt="" id="submit" onclick="sumb()">
+    </div>
+    <div id="card--container">
+        <div class="result res1">
+            <p id="city"></p>
+            <div class="contains">
+                <span id="icon"></span>
+                <hr id="line">
+                <p id="sky">Sky condition : </p>
+                <p id="temp">Temperature : </p>
+                <p id="wind">Wind speed : </p>
+                <p id="humidity">Humidity : </p>           
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
