@@ -69,28 +69,28 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${API}`)
 function setBackground(weather) {
 
     if (weather === "Rain") {
-        background.style.backgroundImage = "url('./resources/rainy-weather.jpg')";
+        background.style.backgroundImage = "url('./resources/rainy-weather-min.webp')";
         head.style.color = "white"; 
-        gif.src = "./resources/icons/rain.gif";
+        gif.src = "./resources/icons/rain-min.gif";
     } else if (weather === "Snow") {
-        background.style.backgroundImage = "url('./resources/snowy-weather.jpg')"; 
+        background.style.backgroundImage = "url('./resources/0.webp')"; 
         head.style.color = "rgb(9, 55, 108);"
-        gif.src = "./resources/icons/snowflake.gif";
+        gif.src = "./resources/icons/snowflake-min.gif";
     } else if (weather === "Clear") {
-        background.style.backgroundImage = "url('./resources/sunny-weather.jpg')"; 
+        background.style.backgroundImage = "url('./resources/sunny-weather-min.webp')"; 
         head.style.color = "white"; 
-        gif.src = "./resources/icons/sun.gif";
+        gif.src = "./resources/icons/sun-min.gif";
     } else if (weather === "Clouds") {
-        background.style.backgroundImage = "url('./resources/cloudy-weather.jpg')"; 
+        background.style.backgroundImage = "url('./resources/cloudy-weather-min.webp')"; 
         head.style.color = "white"; 
-        gif.src = "./resources/icons/cloudy.gif";
+        gif.src = "./resources/icons/cloudy-min.gif";
     }else if (weather === "Haze") {
-        background.style.backgroundImage = "url('./resources/4cc912d13836970e2c10dc3fcc1d1f4a-sd.jpg')"; 
+        background.style.backgroundImage = "url('./resources/4cc912d13836970e2c10dc3fcc1d1f4a-sd-min.webp')"; 
         head.style.color = "rgb(110, 16, 252)";
-        gif.src = "./resources/icons/icons8-haze.gif";
+        gif.src = "./resources/icons/icons8-haze-min.gif";
      }else if (weather === "Smoke") {
-        background.style.backgroundImage = "url('./resources/pat-whelen-mTB9yyAkZQY-unsplash.jpg')"; 
+        background.style.backgroundImage = "url('./resources/pat-whelen-mTB9yyAkZQY-unsplash-min.webp')"; 
         head.style.color = "white";
-        gif.src = "./resources/icons/whirlwind.gif";
+        gif.src = "./resources/icons/whirlwind-min.gif";
     }
  }

@@ -16,7 +16,7 @@
     font-family: 'Varela Round', sans-serif;
     color:rgb(167, 113, 249);
     overflow: hidden;
-    background-image: url("./resources/wallpaperflare.com_wallpaper\(1\).jpg");
+    background-image: url("./resources/wallpaperflare.com_wallpaper\(1\)-min.webp");
 }
 #bg{
     height: 100vh;
@@ -155,10 +155,28 @@ font-family: 'Martian Mono', monospace;
     padding-bottom: 10px;
 }
 
+@keyframes pop {
+    0%{
+        opacity : 0%;
+        height:0px;
+    }
+    100%{
+        opacity :100%
+    }
+}
+
+@keyframes  rotation {
+    from{
+       transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 @media screen  and (max-width: 674px)   {
     body{
     background-color:white;
-    background-image: url("");
     }
     #bg{
         width: 100%;
@@ -170,7 +188,7 @@ font-family: 'Martian Mono', monospace;
         width: 80%;
     }
     .name h1{
-       color:black;
+       color:rgb(215, 190, 252);
        height: 5em;
     }
     #cityname{
@@ -197,21 +215,3 @@ font-family: 'Martian Mono', monospace;
     }
 }
 
-@keyframes pop {
-    0%{
-        opacity : 0%;
-        height:0px;
-    }
-    100%{
-        opacity :100%
-    }
-}
-
-@keyframes  rotation {
-    from{
-       transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
