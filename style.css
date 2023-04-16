@@ -214,4 +214,8 @@ font-family: 'Martian Mono', monospace;
         width:100%
     }
 }
-
+@media screen and (max-height:615px){
+    #city{
+        height : 15vh ;
+    }
+}
