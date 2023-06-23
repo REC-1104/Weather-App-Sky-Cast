@@ -10,12 +10,17 @@ var result = document.querySelector(".result");
 var background = document.querySelector("#bg");
 var head = document.querySelector("h1");
 var gif = document.getElementById("gif");
-var body = document.getElementById("body");
-console.log(body)
+var restart = document.querySelector(".basicBox")
+var input = document.querySelector(".input");
+
 function func(event) {
     if (event.keyCode === 13) {
      sumb();
 }}
+
+restart.addEventListener("click", ()=>{
+    window.location.reload();
+});
 
 function sumb(){
    
@@ -31,7 +36,8 @@ function sumb(){
     background.style.animation = " pop 3s linear ";
     background.style.opacity = "1";
     gif.style.animation =  "rotation 3s ease "; 
-    body.style.background ="linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))"
+    input.style.display = "none";
+    result.style.paddingTop = "70px";
 }
 
 function fetchWeatherData(text){
@@ -60,7 +66,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${API}`)
              humidity.innerHTML = `Humidity : ${data.main.humidity}%`;
              icon.innerHTML = data.weather[0].icon;
              setBackground(sky.innerHTML);
-             changeIcon(sky.innerHTML);
+            
         }
     }
 )
@@ -72,6 +78,7 @@ function setBackground(weather) {
         background.style.backgroundImage = "url('./resources/rainy-weather-min.webp')";
         head.style.color = "white"; 
         gif.src = "./resources/icons/rain-min.gif";
+        
     } else if (weather === "Snow") {
         background.style.backgroundImage = "url('./resources/0.webp')"; 
         head.style.color = "rgb(9, 55, 108);"
@@ -93,4 +100,4 @@ function setBackground(weather) {
         head.style.color = "white";
         gif.src = "./resources/icons/whirlwind-min.gif";
     }
- }
+}
